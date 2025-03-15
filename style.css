@@ -1,0 +1,342 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Times New Roman', serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.logo-text h1 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.logo-text p {
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin-top: 0;
+    font-size: 0.7rem;
+}
+
+header nav ul li {
+    margin: 0 9px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+header nav ul li a:hover {
+    color: #606264;
+}
+
+/* Hero section */
+.hero {
+    background: url('https://www.smkcibeningkng.sch.id/assets/img/smk2.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 80px 100px;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-size:3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background-color: #333;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #606264;
+}
+
+/* Section styles */
+section {
+    padding: 60px 20px;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+hr.separator {
+    border: none;
+    border-top: 2px solid #ccc; 
+    margin: 30px 0; 
+}
+
+hr.separator {
+    border-top: 2px dashed #3a3c3e; 
+    margin: 20px 0;
+}
+
+.iframe-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Bisa disesuaikan */
+    padding-top: 56.25%; /* 16:9 aspect ratio (karena 9/16 = 0.5625) */
+    margin: 30px auto;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* daftar guru */
+.guru {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.guru h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.guru-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on large screens */
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.guru-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.guru-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.guru-item h3 {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.guru-item p {
+    font-size: 0.8;
+    font-weight: normal;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .guru-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .guru-list {
+        grid-template-columns: 1fr; /* 1 column for very small screens */
+    }
+}
+
+
+/* Galeri */
+.galeri-images {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.galeri-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Program Keahlian */
+.program-item {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between image and text */
+}
+
+.program-item img {
+    width: 200px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.program-content {
+    flex: 1;
+}
+
+.program-item h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.program-item p {
+    font-size: 0.8rem;
+}
+
+/* Ekstrakulikuler */
+.ekstrakulikuler-images {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 100px;
+}
+
+.ekstrakulikuler-item {
+    text-align: center;
+}
+
+.ekstrakulikuler-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.ekstrakulikuler-item h3 {
+    margin-top: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    gap : 20px
+}
+
+.ekstrakulikuler-item p {
+    font-size: 0.7rem;
+    margin-top: 5px;
+    font-weight: normal;
+    color:#333
+}
+
+.ekstrakulikuler-item img {
+    width: 150px;  
+    height: 150px;  
+    object-fit: cover;  
+    border-radius: 50%; 
+    margin-bottom: 10px;  
+}
+
+.kontak {
+    padding: 60px 20px;
+    background-color: #333; 
+    color: white; 
+}
+
+.kontak h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white; 
+}
+
+.kontak-content {
+    display: flex;
+    justify-content: space-between; 
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.kontak-info {
+    flex: 1; 
+    text-align: left;
+    font-size: 0.8rem;
+}
+
+.kontak-info p {
+    margin: 10px 0;
+}
+
+.map-container {
+    flex: 1; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+iframe {
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 200px; /* Tentukan tinggi yang konsisten untuk iframe */
+}
+
+
+
